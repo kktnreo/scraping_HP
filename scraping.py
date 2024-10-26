@@ -11,7 +11,6 @@ import gspread
 from google.oauth2.service_account import Credentials
 from dotenv import load_dotenv
 from datetime import datetime
-from urllib.parse import urlparse
 import re
 import os
 
