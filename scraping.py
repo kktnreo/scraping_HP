@@ -157,7 +157,7 @@ def spread_sheet(df, df2):
 	scope = ['https://www.googleapis.com/auth/spreadsheets','https://www.googleapis.com/auth/drive']
     # 認証情報設定
     # ダウンロードしたjsonファイル名をクレデンシャル変数に設定。Pythonファイルと同じフォルダに置く。
-	credentials = Credentials.from_service_account_file("rakuten-api-421705-fee8480637fa.json", scopes=scope)
+	credentials = Credentials.from_service_account_file(os.getenv('JSON_FILE'), scopes=scope)
     # 共有設定したスプレッドシートキーを格納
 	SPREADSHEET_KEY = os.getenv('SPREADSHEET_KEY')
 	gc = gspread.authorize(credentials)
